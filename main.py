@@ -6,7 +6,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import RedirectResponse
 
-
 app = FastAPI()
 app.mount("/frontend", StaticFiles(directory="frontend"), name="frontend")
 app.add_middleware(
