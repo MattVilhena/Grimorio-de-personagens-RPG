@@ -1,0 +1,287 @@
+{
+  "jogador": "João Gabriel",
+  "foto": "",
+
+  "nome": "A maldição de Riften",
+  "classe": "Ladino",
+  "subclasse": "",
+  "nivel": 3,
+  "raca": "Halfling",
+  "subrace": "",
+  "antecedente": "",
+  "alinhamento": "",
+  "experiencia": 0,
+
+  "atributos": {
+    "forca": 15,
+    "destreza": 18,
+    "constituicao": 17,
+    "inteligencia": 16,
+    "sabedoria": 12,
+    "carisma": 12
+  },
+
+  "bonus_proficiencia": 2,
+
+  "saving_throws": {
+    "forca": { "proficiente": false, "bonus_extra": 0 },
+    "destreza": { "proficiente": true, "bonus_extra": 0 },
+    "constituicao": { "proficiente": false, "bonus_extra": 0 },
+    "inteligencia": { "proficiente": true, "bonus_extra": 0 },
+    "sabedoria": { "proficiente": false, "bonus_extra": 0 },
+    "carisma": { "proficiente": false, "bonus_extra": 0 }
+  },
+
+  "pericias": {
+    "acrobacia": { "proficiente": true, "expertise": false },
+    "adestrar_animais": { "proficiente": false, "expertise": false },
+    "arcana": { "proficiente": true, "expertise": false },
+    "atletismo": { "proficiente": false, "expertise": false },
+    "atuacao": { "proficiente": false, "expertise": false },
+    "enganacao": { "proficiente": false, "expertise": false },
+    "furtividade": { "proficiente": true, "expertise": true },
+    "historia": { "proficiente": false, "expertise": false },
+    "intimidacao": { "proficiente": false, "expertise": false },
+    "intuicao": { "proficiente": false, "expertise": false },
+    "investigacao": { "proficiente": false, "expertise": false },
+    "medicina": { "proficiente": false, "expertise": false },
+    "natureza": { "proficiente": false, "expertise": false },
+    "percepcao": { "proficiente": false, "expertise": false },
+    "persuasao": { "proficiente": false, "expertise": false },
+    "prestidigitacao": { "proficiente": true, "expertise": true },
+    "religiao": { "proficiente": false, "expertise": false },
+    "sobrevivencia": { "proficiente": false, "expertise": false }
+  },
+
+  "combate": {
+    "pv_maximo": 24,
+    "pv_atual": 24,
+    "pv_temporario": 0,
+    "ca": 11,
+    "iniciativa": 4,
+    "deslocamento": 7.5,
+
+    "dados_de_vida": {
+      "tipo": "d8",
+      "total": 3,
+      "usados": 0
+    },
+
+    "resistencias": [
+      "Veneno"
+    ],
+
+    "imunidades": [],
+    "vulnerabilidades": []
+  },
+
+  "ataques": [
+    {
+      "nome": "Rapieira",
+      "bonus_ataque": 6,
+      "dano": "1d8",
+      "tipo_de_dano": "Perfurante",
+      "alcance": "",
+      "notas": "Ataque de acuidade"
+    },
+    {
+      "nome": "Arco curto",
+      "bonus_ataque": 6,
+      "dano": "1d6",
+      "tipo_de_dano": "Perfurante",
+      "alcance": "",
+      "notas": ""
+    },
+    {
+      "nome": "Adaga",
+      "bonus_ataque": 6,
+      "dano": "1d4",
+      "tipo_de_dano": "Perfurante",
+      "alcance": "",
+      "notas": ""
+    }
+  ],
+
+  "magias": {
+    "conjurador": true,
+    "atributo_conjuracao": "",
+    "cd_magia": 8,
+    "bonus_ataque_magia": 0,
+
+    "truques": [
+      "Mãos mágicas",
+      "Ilusão Menor",
+      "Rajada de Veneno"
+    ],
+
+    "nivel_1": [
+      "Disfarçar-se",
+      "Sono",
+      "Ilusão Silenciosa"
+    ],
+
+    "nivel_2": [],
+    "nivel_3": [],
+    "nivel_4": [],
+    "nivel_5": [],
+    "nivel_6": [],
+    "nivel_7": [],
+    "nivel_8": [],
+    "nivel_9": []
+  },
+
+  "slots_de_magia": {
+    "nivel_1": { "total": 2, "usados": 0 },
+    "nivel_2": { "total": 0, "usados": 0 },
+    "nivel_3": { "total": 0, "usados": 0 },
+    "nivel_4": { "total": 0, "usados": 0 },
+    "nivel_5": { "total": 0, "usados": 0 },
+    "nivel_6": { "total": 0, "usados": 0 },
+    "nivel_7": { "total": 0, "usados": 0 },
+    "nivel_8": { "total": 0, "usados": 0 },
+    "nivel_9": { "total": 0, "usados": 0 }
+  },
+
+  "equipamentos": {
+    "armadura_equipada": "Armadura de couro",
+    "escudo_equipado": false,
+
+    "inventario": [
+      {
+        "item": "Rapieira",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": ""
+      },
+      {
+        "item": "Arco curto",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": ""
+      },
+      {
+        "item": "Adaga",
+        "quantidade": 2,
+        "peso": 0,
+        "descricao": ""
+      },
+      {
+        "item": "Ferramentas de ladrão",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": ""
+      },
+      {
+        "item": "Pacote de assaltante",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": ""
+      }
+    ],
+
+    "moedas": {
+      "platina": 0,
+      "ouro": 16,
+      "electrum": 0,
+      "prata": 0,
+      "cobre": 0
+    },
+
+    "carga_atual": 0,
+    "carga_maxima": 225
+  },
+
+  "habilidades_e_talentos": [
+    {
+      "nome": "Sorte",
+      "origem": "Halfling",
+      "descricao": "Quando rolar 1 natural, pode rolar novamente"
+    },
+    {
+      "nome": "Bravura",
+      "origem": "Halfling",
+      "descricao": "Vantagem contra medo"
+    },
+    {
+      "nome": "Agilidade Halfling",
+      "origem": "Halfling",
+      "descricao": "Pode atravessar criaturas maiores"
+    },
+    {
+      "nome": "Resiliência",
+      "origem": "Halfling",
+      "descricao": "Vantagem contra veneno e resistência a dano venenoso"
+    },
+    {
+      "nome": "Furtividade Natural",
+      "origem": "Halfling",
+      "descricao": "Esconde atrás de criaturas maiores"
+    },
+    {
+      "nome": "Especialização",
+      "origem": "Ladino",
+      "descricao": "Dobro em Furtividade e Prestidigitação"
+    },
+    {
+      "nome": "Ataque Furtivo",
+      "origem": "Ladino",
+      "descricao": "2d6 dano adicional"
+    },
+    {
+      "nome": "Ação Ardilosa",
+      "origem": "Ladino",
+      "descricao": "Disparada, Esconder ou Desengajar como ação bônus"
+    },
+    {
+      "nome": "Dialeto Silêncio",
+      "origem": "Especial",
+      "descricao": "Falar telepaticamente até 9m"
+    }
+  ],
+
+  "proficiencias_e_idiomas": {
+    "armaduras": [
+      "Armaduras leves"
+    ],
+
+    "armas": [
+      "Armas simples",
+      "Bestas de mão",
+      "Espadas longas",
+      "Rapieiras",
+      "Espadas curtas"
+    ],
+
+    "ferramentas": [
+      "Ferramentas de ladrão"
+    ],
+
+    "idiomas": [
+      "Comum",
+      "Halfling"
+    ]
+  },
+
+  "sentidos": {
+    "percepcao_passiva": 11,
+    "visao_no_escuro": 0,
+    "outros": [
+      "Telepatia 9m"
+    ]
+  },
+
+  "personalidade": {
+    "tracos": "Eu sou incrivelmente receoso em confiar. Eu sou minha melhor companhia. Sempre tenho um plano para quando as coisas dão errado.",
+    "ideal": "Eu me tornarei o maior ladrão que já existiu.",
+    "vinculo": "Guilda de bandidos / Reino Riften",
+    "fraqueza": "Eu viro as costas e corro quando as coisas começam a ficar ruins."
+  },
+
+  "historia": "A7P foi criada pelo programa secreto da Minor Hood como agente de infiltração do Reino Riften. Treinada desde a infância como ferramenta do reino, sofreu condicionamento psicológico extremo. Após tortura e tentativa de execução, despertou poderes mágicos e fugiu, tornando-se conhecida como A Maldição de Riften.",
+
+  "aliados_e_organizacoes": [
+    "Minor Hood (Capuz Menor)"
+  ],
+
+  "notas": "Idade:17 | Altura:0,84m | Peso:19kg | Olhos:Vermelhos | Pele:Pálida | Cabelos:Pretos | Tesouro: 5 gemas (50 PO cada), 3 obras de arte (25 PO cada), 16 PO"
+}

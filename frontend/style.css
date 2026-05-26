@@ -38,6 +38,7 @@
         border-bottom: 2px solid #8b6914;
         padding-bottom: 10px;
         font-family: 'Modesto Condensed Bold', serif;
+        text-transform: capitalize;
     }
     h2{
         color: #68302c;
@@ -69,14 +70,16 @@
         background-color: #68302c;
         color: #f5e6c8;
         border: 2px solid #c9a227;
-        padding: 10px 20px;
+        padding: 12px 24px;
         font-family: "Mr Eaves Small Caps", serif;
-        font-size: 16px;
+        font-size: 18px;
         border-radius: 4px;
         cursor: pointer;
         margin-bottom: 8px;
-        width: 15%;
+        width: fit-content;
+        min-width: 250px;
         text-align: left;
+        text-transform: capitalize;
     }
     #characters-list button:hover{
         color: #8b3f3a;

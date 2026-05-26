@@ -1,0 +1,251 @@
+{
+  "jogador": "Xarlis",
+  "foto": "",
+
+  "nome": "Alpargata",
+  "classe": "Druida",
+  "subclasse": "Círculo da Terra",
+  "nivel": 3,
+  "raca": "Elfo da Floresta",
+  "subrace": "",
+  "antecedente": "",
+  "alinhamento": "",
+  "experiencia": 0,
+
+  "atributos": {
+    "forca": 11,
+    "destreza": 14,
+    "constituicao": 13,
+    "inteligencia": 14,
+    "sabedoria": 16,
+    "carisma": 13
+  },
+
+  "bonus_proficiencia": 2,
+
+  "saving_throws": {
+    "forca": { "proficiente": false, "bonus_extra": 0 },
+    "destreza": { "proficiente": false, "bonus_extra": 0 },
+    "constituicao": { "proficiente": false, "bonus_extra": 0 },
+    "inteligencia": { "proficiente": true, "bonus_extra": 0 },
+    "sabedoria": { "proficiente": true, "bonus_extra": 0 },
+    "carisma": { "proficiente": false, "bonus_extra": 0 }
+  },
+
+  "pericias": {
+    "acrobacia": { "proficiente": false, "expertise": false },
+    "adestrar_animais": { "proficiente": true, "expertise": false },
+    "arcana": { "proficiente": false, "expertise": false },
+    "atletismo": { "proficiente": false, "expertise": false },
+    "atuacao": { "proficiente": false, "expertise": false },
+    "enganacao": { "proficiente": false, "expertise": false },
+    "furtividade": { "proficiente": false, "expertise": false },
+    "historia": { "proficiente": false, "expertise": false },
+    "intimidacao": { "proficiente": false, "expertise": false },
+    "intuicao": { "proficiente": false, "expertise": false },
+    "investigacao": { "proficiente": false, "expertise": false },
+    "medicina": { "proficiente": false, "expertise": false },
+    "natureza": { "proficiente": true, "expertise": false },
+    "percepcao": { "proficiente": true, "expertise": false },
+    "persuasao": { "proficiente": false, "expertise": false },
+    "prestidigitacao": { "proficiente": false, "expertise": false },
+    "religiao": { "proficiente": false, "expertise": false },
+    "sobrevivencia": { "proficiente": false, "expertise": false }
+  },
+
+  "combate": {
+    "pv_maximo": 21,
+    "pv_atual": 21,
+    "pv_temporario": 0,
+    "ca": 13,
+    "iniciativa": 2,
+    "deslocamento": 10.5,
+
+    "dados_de_vida": {
+      "tipo": "d8",
+      "total": 3,
+      "usados": 0
+    },
+
+    "resistencias": [],
+    "imunidades": [
+      "Sono mágico"
+    ],
+    "vulnerabilidades": []
+  },
+
+  "ataques": [
+    {
+      "nome": "Cimitarra",
+      "bonus_ataque": 4,
+      "dano": "1d6",
+      "tipo_de_dano": "Cortante",
+      "alcance": "",
+      "notas": ""
+    }
+  ],
+
+  "magias": {
+    "conjurador": true,
+    "atributo_conjuracao": "Sabedoria",
+    "cd_magia": 13,
+    "bonus_ataque_magia": 5,
+
+    "truques": [],
+
+    "nivel_1": [
+      "Patas de Aranha",
+      "Pele de Árvore"
+    ],
+
+    "nivel_2": [],
+
+    "nivel_3": [],
+    "nivel_4": [],
+    "nivel_5": [],
+    "nivel_6": [],
+    "nivel_7": [],
+    "nivel_8": [],
+    "nivel_9": []
+  },
+
+  "slots_de_magia": {
+    "nivel_1": { "total": 4, "usados": 0 },
+    "nivel_2": { "total": 2, "usados": 0 },
+    "nivel_3": { "total": 0, "usados": 0 },
+    "nivel_4": { "total": 0, "usados": 0 },
+    "nivel_5": { "total": 0, "usados": 0 },
+    "nivel_6": { "total": 0, "usados": 0 },
+    "nivel_7": { "total": 0, "usados": 0 },
+    "nivel_8": { "total": 0, "usados": 0 },
+    "nivel_9": { "total": 0, "usados": 0 }
+  },
+
+  "equipamentos": {
+    "armadura_equipada": "Corselete de couro",
+    "escudo_equipado": true,
+
+    "inventario": [
+      {
+        "item": "Escudo de madeira",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": ""
+      },
+      {
+        "item": "Cimitarra",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": ""
+      },
+      {
+        "item": "Kit de Herbalismo",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": ""
+      }
+    ],
+
+    "moedas": {
+      "platina": 0,
+      "ouro": 0,
+      "electrum": 0,
+      "prata": 0,
+      "cobre": 0
+    },
+
+    "carga_atual": 0,
+    "carga_maxima": 165
+  },
+
+  "habilidades_e_talentos": [
+    {
+      "nome": "Visão no Escuro",
+      "origem": "Elfo",
+      "descricao": "Enxerga no escuro"
+    },
+    {
+      "nome": "Ancestral Feérico",
+      "origem": "Elfo",
+      "descricao": "Vantagem contra ser enfeitiçado e imune a sono mágico"
+    },
+    {
+      "nome": "Máscara da Natureza",
+      "origem": "Elfo da Floresta",
+      "descricao": "Pode esconder-se em fenômenos naturais leves"
+    },
+    {
+      "nome": "Conjuração de Ritual",
+      "origem": "Druida",
+      "descricao": "Pode conjurar magias como ritual"
+    },
+    {
+      "nome": "Foco de Conjuração",
+      "origem": "Druida",
+      "descricao": "Pode utilizar foco druídico"
+    },
+    {
+      "nome": "Forma Selvagem",
+      "origem": "Druida",
+      "descricao": "2 usos por descanso curto/longo; besta ND 1/4 sem voo ou natação"
+    },
+    {
+      "nome": "Recuperação Natural",
+      "origem": "Círculo da Terra",
+      "descricao": "Recupera espaços de magia durante descanso curto"
+    }
+  ],
+
+  "proficiencias_e_idiomas": {
+    "armaduras": [
+      "Armaduras leves",
+      "Armaduras médias",
+      "Escudos"
+    ],
+
+    "armas": [
+      "Espada longa",
+      "Espada curta",
+      "Arco longo",
+      "Arco curto",
+      "Adagas",
+      "Azagaias",
+      "Bordões",
+      "Cimitarras",
+      "Clavas",
+      "Dardos",
+      "Foices",
+      "Funda",
+      "Lanças",
+      "Maças"
+    ],
+
+    "ferramentas": [
+      "Kit de Herbalismo"
+    ],
+
+    "idiomas": [
+      "Comum",
+      "Élfico"
+    ]
+  },
+
+  "sentidos": {
+    "percepcao_passiva": 15,
+    "visao_no_escuro": 18,
+    "outros": []
+  },
+
+  "personalidade": {
+    "tracos": "",
+    "ideal": "",
+    "vinculo": "",
+    "fraqueza": ""
+  },
+
+  "historia": "",
+
+  "aliados_e_organizacoes": [],
+
+  "notas": "Subclasse: Círculo da Terra | Forma Selvagem: 2 usos | Druidas não utilizam armaduras/escudos metálicos"
+}
