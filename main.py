@@ -1,5 +1,6 @@
 import os
 import json
+import unicodedata
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -15,17 +16,20 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+def remover_acentos(texto: str) -> str:
+    texto_normalizado = unicodedata.normalize('NFKD', texto)
+    return texto_normalizado.encode('ASCII', 'ignore').decode('utf-8')
 
 @app.get("/")
 def raiz():
     return RedirectResponse(url="/frontend/index.html")
 
 def buscar_personagem(character):
-    character = character.lower().strip()
+    character = remover_acentos(character.lower().strip())
     for arquivo in os.listdir("personagens"):
         if arquivo.endswith(".json"):
-            nome_arquivo_limpo = arquivo.replace(".json", "").lower()
-            if nome_arquivo_limpo == character:
+            nome_arquivo_limpo = remover_acentos(arquivo.replace(".json", "").lower())
+            if character in nome_arquivo_limpo:
                 caminho = f"personagens/{arquivo}"
                 with open(caminho, encoding="utf-8") as f:
                     ficha = json.load(f)
