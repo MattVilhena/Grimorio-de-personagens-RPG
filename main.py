@@ -25,7 +25,7 @@ def buscar_personagem(character):
     for arquivo in os.listdir("personagens"):
         if arquivo.endswith(".json"):
             nome_arquivo_limpo = arquivo.replace(".json", "").lower()
-            if nome_arquivo_limpo == character:
+            if nome_arquivo_limpo in character:
                 caminho = f"personagens/{arquivo}"
                 with open(caminho, encoding="utf-8") as f:
                     ficha = json.load(f)
