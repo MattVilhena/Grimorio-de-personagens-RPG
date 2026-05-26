@@ -22,18 +22,15 @@ def raiz():
 
 def buscar_personagem(character):
     character = character.lower()
-    caminho = f"personagens/{character}.json"
-
-    if os.path.exists(caminho):# Carrega o arquivo
-        with open(caminho, encoding="utf-8") as f:
-            ficha = json.load(f)
-            return ficha # Abre a ficha
-    else:
-        for arquivo in os.listdir("personagens"): # Verifica todos os arquvos da pasta
-            with open(f"personagens/{arquivo}", encoding = "utf-8") as f: # Carrega o arquivo
-                ficha = json.load(f)
-                return ficha # Se existir, abre a ficha
-        return None # Se não tiver o nome em nenhum arquiva, retorna none
+    for arquivo in os.listdir("personagens"):
+        if arquivo.endswith(".json"):
+            nome_arquivo_limpo = arquivo.replace(".json", "").lower()
+            if nome_arquivo_limpo == character:
+                caminho = f"personagens/{arquivo}"
+                with open(caminho, encoding="utf-8") as f:
+                    ficha = json.load(f)
+                    return ficha
+    return None
 
 @app.get("/personagem/{character}")
 def get_personagem(character: str):
