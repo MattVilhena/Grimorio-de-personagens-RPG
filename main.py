@@ -3,6 +3,7 @@ import json
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
+from fastapi.responses import RedirectResponse
 
 
 app = FastAPI()
@@ -14,6 +15,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+
+@app.get("/")
+def raiz():
+    return RedirectResponse(url="/frontend/index.html")
 
 def buscar_personagem(character):
     character = character.lower()
