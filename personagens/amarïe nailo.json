@@ -1,0 +1,251 @@
+{
+  "jogador": "Amanda",
+  "foto": "",
+
+  "nome": "Amarïe Nailo",
+  "classe": "Patrulheiro",
+  "subclasse": "Conclave do Caçador",
+  "nivel": 3,
+  "raca": "Alto Elfo",
+  "subrace": "",
+  "antecedente": "Forasteiro",
+  "alinhamento": "Chaotic neutra",
+  "experiencia": 0,
+
+  "atributos": {
+    "forca": 14,
+    "destreza": 18,
+    "constituicao": 14,
+    "inteligencia": 13,
+    "sabedoria": 16,
+    "carisma": 10
+  },
+
+  "bonus_proficiencia": 2,
+
+  "saving_throws": {
+    "forca": { "proficiente": true, "bonus_extra": 0 },
+    "destreza": { "proficiente": true, "bonus_extra": 0 },
+    "constituicao": { "proficiente": false, "bonus_extra": 0 },
+    "inteligencia": { "proficiente": false, "bonus_extra": 0 },
+    "sabedoria": { "proficiente": false, "bonus_extra": 0 },
+    "carisma": { "proficiente": false, "bonus_extra": 0 }
+  },
+
+  "pericias": {
+    "acrobacia": { "proficiente": false, "expertise": false },
+    "adestrar_animais": { "proficiente": false, "expertise": false },
+    "arcana": { "proficiente": false, "expertise": false },
+    "atletismo": { "proficiente": true, "expertise": false },
+    "atuacao": { "proficiente": false, "expertise": false },
+    "enganacao": { "proficiente": false, "expertise": false },
+    "furtividade": { "proficiente": true, "expertise": false },
+    "historia": { "proficiente": false, "expertise": false },
+    "intimidacao": { "proficiente": false, "expertise": false },
+    "intuicao": { "proficiente": true, "expertise": false },
+    "investigacao": { "proficiente": false, "expertise": false },
+    "medicina": { "proficiente": false, "expertise": false },
+    "natureza": { "proficiente": false, "expertise": false },
+    "percepcao": { "proficiente": true, "expertise": false },
+    "persuasao": { "proficiente": false, "expertise": false },
+    "prestidigitacao": { "proficiente": false, "expertise": false },
+    "religiao": { "proficiente": false, "expertise": false },
+    "sobrevivencia": { "proficiente": true, "expertise": false }
+  },
+
+  "combate": {
+    "pv_maximo": 22,
+    "pv_atual": 22,
+    "pv_temporario": 0,
+    "ca": 15,
+    "iniciativa": 4,
+    "deslocamento": 9,
+    "dados_de_vida": {
+      "tipo": "d10",
+      "total": 3,
+      "usados": 0
+    },
+    "resistencias": [],
+    "imunidades": [],
+    "vulnerabilidades": []
+  },
+
+  "ataques": [
+    {
+      "nome": "Arco longo",
+      "bonus_ataque": 4,
+      "dano": "1d8",
+      "tipo_de_dano": "Perfurante",
+      "alcance": "",
+      "notas": "Estilo de luta: Arquearia (+2)"
+    },
+    {
+      "nome": "Adaga",
+      "bonus_ataque": 4,
+      "dano": "1d4",
+      "tipo_de_dano": "Perfurante",
+      "alcance": "",
+      "notas": ""
+    }
+  ],
+
+  "magias": {
+    "conjurador": true,
+    "atributo_conjuracao": "Sabedoria",
+    "cd_magia": 13,
+    "bonus_ataque_magia": 5,
+    "truques": [
+      "Proteção contra lâminas"
+    ],
+    "nivel_1": [
+      "Curar Ferimentos",
+      "Golpe Constritor",
+      "Saraivada de Espinhos",
+      "Disfarçar"
+    ],
+    "nivel_2": [],
+    "nivel_3": [],
+    "nivel_4": [],
+    "nivel_5": [],
+    "nivel_6": [],
+    "nivel_7": [],
+    "nivel_8": [],
+    "nivel_9": []
+  },
+
+  "slots_de_magia": {
+    "nivel_1": { "total": 3, "usados": 0 },
+    "nivel_2": { "total": 0, "usados": 0 },
+    "nivel_3": { "total": 0, "usados": 0 },
+    "nivel_4": { "total": 0, "usados": 0 },
+    "nivel_5": { "total": 0, "usados": 0 },
+    "nivel_6": { "total": 0, "usados": 0 },
+    "nivel_7": { "total": 0, "usados": 0 },
+    "nivel_8": { "total": 0, "usados": 0 },
+    "nivel_9": { "total": 0, "usados": 0 }
+  },
+
+  "equipamentos": {
+    "armadura_equipada": "Armadura de couro",
+    "escudo_equipado": false,
+    "inventario": [
+      {"item":"Adaga","quantidade":2,"peso":0,"descricao":""},
+      {"item":"Arco longo","quantidade":1,"peso":0,"descricao":""},
+      {"item":"Flechas","quantidade":20,"peso":0,"descricao":""},
+      {"item":"Mochila","quantidade":1,"peso":0,"descricao":""},
+      {"item":"Pé de cabra","quantidade":1,"peso":0,"descricao":""},
+      {"item":"Martelo","quantidade":1,"peso":0,"descricao":""},
+      {"item":"Pítons","quantidade":10,"peso":0,"descricao":""},
+      {"item":"Tochas","quantidade":10,"peso":0,"descricao":""},
+      {"item":"Caixa de fogo","quantidade":1,"peso":0,"descricao":""},
+      {"item":"Rações","quantidade":10,"peso":0,"descricao":""},
+      {"item":"Cantil","quantidade":1,"peso":0,"descricao":""},
+      {"item":"Corda de cânhamo","quantidade":1,"peso":0,"descricao":"15 metros"},
+      {"item":"Armadilha de caça","quantidade":1,"peso":0,"descricao":""},
+      {"item":"Roupas de viajante","quantidade":1,"peso":0,"descricao":""}
+    ],
+    "moedas": {
+      "platina": 0,
+      "ouro": 0,
+      "electrum": 0,
+      "prata": 0,
+      "cobre": 0
+    },
+    "carga_atual": 0,
+    "carga_maxima": 210
+  },
+
+  "habilidades_e_talentos": [
+    {
+      "nome":"Ancestral Feérico",
+      "origem":"Alto Elfo",
+      "descricao":"Características raciais élficas"
+    },
+    {
+      "nome":"Inimigo Favorito",
+      "origem":"Patrulheiro",
+      "descricao":"Humanoides (+2)"
+    },
+    {
+      "nome":"Explorador Natural",
+      "origem":"Patrulheiro",
+      "descricao":"Floresta"
+    },
+    {
+      "nome":"Estilo de Luta",
+      "origem":"Patrulheiro",
+      "descricao":"Arquearia (+2)"
+    },
+    {
+      "nome":"Consciência Primitiva",
+      "origem":"Patrulheiro",
+      "descricao":""
+    },
+    {
+      "nome":"Emboscador Terrível",
+      "origem":"Conclave do Caçador",
+      "descricao":"Iniciativa + Sabedoria, +3m deslocamento no primeiro turno, ataque adicional, 2d8 dano"
+    },
+    {
+      "nome":"Assassino de Colossos",
+      "origem":"Conclave do Caçador",
+      "descricao":"1d8 dano adicional"
+    },
+    {
+      "nome":"Visão Umbral",
+      "origem":"Conclave do Caçador",
+      "descricao":"Visão no escuro 27m"
+    },
+    {
+      "nome":"Companheiro Animal",
+      "origem":"Especial",
+      "descricao":"Pseudodragão negro Chulé"
+    }
+  ],
+
+  "proficiencias_e_idiomas": {
+    "armaduras": [
+      "Armaduras leves",
+      "Armaduras médias",
+      "Escudos"
+    ],
+    "armas": [
+      "Armas simples",
+      "Armas marciais",
+      "Espadas longas",
+      "Espadas curtas",
+      "Arcos longos",
+      "Arcos curtos"
+    ],
+    "ferramentas": [
+      "Charamela"
+    ],
+    "idiomas": [
+      "Humano",
+      "Élfico",
+      "Dracônico",
+      "Celestial"
+    ]
+  },
+
+  "sentidos": {
+    "percepcao_passiva": 15,
+    "visao_no_escuro": 27,
+    "outros": []
+  },
+
+  "personalidade": {
+    "tracos":"Eu tenho uma lição pra cada situação, aprendida observando a natureza.",
+    "ideal":"Questionamentos e curiosidade são os pilares do progresso.",
+    "vinculo":"Minhas ferramentas são símbolo de minha vida passada.",
+    "fraqueza":"Agora que voltei ao mundo, eu desfruto de seus prazeres um pouco demais."
+  },
+
+  "historia":"Amarïe Nailo perdeu família, amigos, terras e até seu nome durante a guerra entre Allemantheia e Illuskani. Tornou-se prisioneira de guerra e exploradora forçada. Seu único vínculo verdadeiro é seu companheiro pseudodragão negro Chulé.",
+
+  "aliados_e_organizacoes":[
+    "Chulé (Pseudodragão negro)"
+  ],
+
+  "notas":"Idade: 250 anos | Altura: 1,60m | Peso: 60kg | Olhos: Azuis | Pele: Albina | Cabelos: Loiros"
+}
