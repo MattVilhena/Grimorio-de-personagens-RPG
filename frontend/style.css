@@ -229,15 +229,60 @@
         background-color: #8b3f3a;
     }
 
+@media (max-width: 768px){
 
-┌──────────────────────────────────┐
-│  Nome          │  Moedas         │  ←2 colunas
-├────────────────┴─────────────────┤
-│ PV │ CA │                             ←2 colunas
-Iniciativa │ Deslocamento│               ←2 colunas
-├──────────────────────────────────┤
-│  Atributos  │  Ataques           │  ←2 colunas
-├──────────────────────────────────┤
-│ Saves │ Prof. │                      ←2 colunas
-Pericias         │                      ←1 colunas
-└──────────────────────────────────┘
+    #pergaminho{
+        padding: 30px 15px;
+        border-radius: 0;
+    }    
+
+    #characters-list button{
+        width: 100%;
+        text-align: center;
+        padding: 12px;
+    }
+
+    #header, #stats_combate, #atributos_e_ataques #stats_secundarios {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    #atributos{
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    #ataques {
+        grid-column: 1;
+        grid-row: auto;
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    #mensagem_ataque {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    #lista_pericias {
+        column-count: 1;
+    }    
+
+    #input-name {
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    #buscar{
+        width: 100%;
+        margin-left: 0;
+        padding: 12px;
+    }
+
+    #moedas table{
+        width: 100%;
+        font-size: 14px;
+    }
+}
