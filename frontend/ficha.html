@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="pergaminho">
+        <h1 id="nome"></h1>
+        <div id="header">
+            <h2 id="classe-nivel"></h2>
+            <div id ="moedas"></div>
+        </div>
+        <div id="stat-principais">
+            <div id="stats_combate">
+                <p>Pontos de Vida: <span id="pv"></span></p>
+                <p>Classe de armadura: <span id="ca"></span></p>
+                <p>Iniciativa: <span id="iniciativa"></span></p>
+                <p>Deslocamento: <span id="deslocamento"></span></p>
+                </div>
+            <div id="atributos_e_ataques">
+                <div id="atributos">
+                    <p><strong>Atributo | Valor | Modificador</strong></p>
+                    <p>FORÇA: <span id="for"></span> [<span id="forca-mod"></span>]</p>
+                    <p>DESTREZA: <span id="des"></span> [<span id ="destreza-mod"></span>]</p>
+                    <p>CONSTITUIÇÃO: <span id="con"></span> [<span id="constituicao-mod"></span>]</p>
+                    <p>INTELIGÊNCIA: <span id="int"></span> [<span id="inteligencia-mod"></span>]</p>
+                    <p>SABEDORIA: <span id="sab"></span> [<span id="sabedoria-mod"></span>]</p>
+                    <p>CARISMA: <span id="car"></span> [<span id="carisma-mod"></span>]</p>
+                </div>
+                <div id="ataques"></div>
+                <div id="mensagem_ataque"></div>
+            </div>
+        </div>
+        <div id="stats_secundarios">
+            <div id="saving-throws"><h3>Saving Trows</h3></div>
+            <div id="pericias_proficientes"><h3>Pericias proficientes</h3></div>
+            <div id="pericias">
+                <h3>Pericias</h3>
+                <div id="lista_pericias"></div>
+            </div>
+        </div>
+        <div id="abas">
+            <button onclick="mostrarAba('inventario')">Inventário</button>
+            <button onclick="mostrarAba('magias')">Magias</button>
+            <button onclick="mostrarAba('habilidades')">Habilidades</button>
+            <button onclick="mostrarAba('conversao')">Conversor de moedas</button>
+            <div id="inventario"></div>
+            <div id="magias"></div>
+            <div id="habilidades"></div>
+            <div id="conversao"></div>
+        </div>
+    </div>
+    <script>
+        function mostrarAba(aba){
+            document.getElementById("inventario").style.display = "none"
+            document.getElementById("magias").style.display = "none"
+            document.getElementById("habilidades").style.display = "none"
+            document.getElementById("conversao").style.display = "none"
+
+            document.getElementById(aba).style.display = "block"
+        }
+
+        function mostrarAtaque(dano, bonus, tipo){
+            const caixa = document.getElementById("mensagem_ataque")
+            caixa.style.display = "block" 
+            caixa.innerHTML = `<p>Role ${dano} e some +${bonus}(bonus) para acertar.</p>`
+            setTimeout(() =>{
+                caixa.style.display = "none"
+                caixa.innerHTML = ""
+            }, 10000)
+        }        
+
+        function converter(){
+            const quantidade = document.getElementById("quantidade").value
+            const origem = document.getElementById("moeda_origem").value
+            const destino = document.getElementById("moeda_destino").value
+            const valores = {
+                cobre: 1,
+                prata: 10,
+                electrum: 50,
+                ouro: 100,
+                platina: 1000
+            }
+            const resultado_conversao = quantidade * (valores[origem] / valores[destino])
+            document.getElementById("resultado_conversao").textContent = resultado_conversao
+        }
+
+
+        const params = new URLSearchParams(window.location.search)
+        const personagem = params.get("personagem")
+        fetch(`/personagem/${personagem}`)
+        .then(resposta => {
+            if (!resposta.ok){
+                return
+            }
+            return resposta.json()
+        })
+        .then(dados =>{
+            if (!dados) return
+       
+
+            document.getElementById("nome").textContent = dados.nome
+            document.getElementById("classe-nivel").textContent = `${dados.classe} - Nivel ${dados.nivel}`
+            document.getElementById("pv").textContent = dados.combate.pv_maximo
+            document.getElementById("ca").textContent = dados.combate.ca
+            document.getElementById("iniciativa").textContent = dados.combate.iniciativa
+            document.getElementById("deslocamento").textContent = dados.combate.deslocamento
+            document.getElementById("for").textContent = dados.atributos.forca
+            document.getElementById("forca-mod").textContent = Math.floor((dados.atributos.forca - 10)/2)
+            document.getElementById("des").textContent = dados.atributos.destreza
+            document.getElementById("destreza-mod").textContent = Math.floor((dados.atributos.destreza - 10)/2)
+            document.getElementById("con").textContent = dados.atributos.constituicao
+            document.getElementById("constituicao-mod").textContent = Math.floor((dados.atributos.constituicao - 10)/2)
+            document.getElementById("int").textContent = dados.atributos.inteligencia
+            document.getElementById("inteligencia-mod").textContent = Math.floor((dados.atributos.inteligencia - 10)/2)
+            document.getElementById("sab").textContent = dados.atributos.sabedoria
+            document.getElementById("sabedoria-mod").textContent = Math.floor((dados.atributos.sabedoria - 10)/2)
+            document.getElementById("car").textContent = dados.atributos.carisma
+            document.getElementById("carisma-mod").textContent = Math.floor((dados.atributos.carisma - 10)/2)
+
+            for (const ataque of dados.ataques)
+            document.getElementById("ataques").innerHTML += `<p><strong>${ataque.nome}</strong> | Bônus: +<strong>${ataque.bonus_ataque}</strong> | Dano: <strong>${ataque.dano}</strong> | Tipo de dano: <strong>${ataque.tipo_de_dano}</strong> | Alcance: <strong>${ataque.alcance}</strong>
+            <p><button onclick="mostrarAtaque('${ataque.dano}', ${ataque.bonus_ataque}, '${ataque.tipo_de_dano}')"> Atacar</button></p></p>`
+
+            const atributos_por_save ={
+                "forca": dados.atributos.forca,
+                "destreza": dados.atributos.destreza,
+                "constituicao": dados.atributos.constituicao,
+                "inteligencia": dados.atributos.inteligencia,
+                "sabedoria": dados.atributos.sabedoria,
+                "carisma": dados.atributos.carisma
+            }
+
+            for (const [nome, valor] of Object.entries(dados.saving_throws)){
+                const atributo = atributos_por_save[nome]
+                const mod = Math.floor((atributo -10) / 2)
+                const bonus = mod + (valor.proficiente ? dados.bonus_proficiencia : 0)
+
+                document.getElementById("saving-throws").innerHTML += `<p>${nome}: <strong>${bonus}</strong></p>`
+            }
+
+            const atributos_por_pericia = {
+                "acrobacia": dados.atributos.destreza,
+                "adestrar_animais": dados.atributos.sabedoria,
+                "arcana": dados.atributos.inteligencia,
+                "atletismo": dados.atributos.forca,
+                "atuacao": dados.atributos.carisma,
+                "enganacao": dados.atributos.carisma,
+                "furtividade": dados.atributos.destreza,
+                "historia": dados.atributos.inteligencia,
+                "intimidacao": dados.atributos.carisma,
+                "intuicao": dados.atributos.sabedoria,
+                "investigacao": dados.atributos.inteligencia,
+                "medicina": dados.atributos.sabedoria,
+                "natureza": dados.atributos.inteligencia,
+                "percepcao": dados.atributos.sabedoria,
+                "persuasao": dados.atributos.carisma,
+                "prestidigitacao": dados.atributos.destreza,
+                "religiao": dados.atributos.inteligencia,
+                "sobrevivencia": dados.atributos.sabedoria,
+            }
+            for (const [nome, valor] of Object.entries(dados.pericias)){
+                const atributo = atributos_por_pericia[nome]
+                const mod = Math.floor((atributo - 10) / 2)
+                const bonus = mod + (valor.proficiente ? dados.bonus_proficiencia : 0)
+
+            if (valor.proficiente) {
+                document.getElementById("pericias_proficientes").innerHTML += `<p>${nome.replace("_", " ")}: <strong>${bonus}</strong></p>`
+            }
+            else {
+                document.getElementById("lista_pericias").innerHTML += `<p>${nome.replace("_", " ")}: <strong>${bonus}</strong></p>`
+            }
+            }
+            for (const entrada of dados.equipamentos.inventario){
+                let conteudo = `<strong>${entrada.item}</strong> - Quantidade: ${entrada.quantidade}`
+
+            if (entrada.peso > 0){
+                conteudo += ` - Peso: ${entrada.peso}`
+            }
+            if (entrada.descricao != ""){
+                conteudo += `<br>Descrição: ${entrada.descricao}`
+            }
+            document.getElementById("inventario").innerHTML += `<p>${conteudo}</p>`
+            }
+
+            for (const truque of dados.magias.truques){
+                if (truque != ""){
+                    document.getElementById("magias").innerHTML += `<p>Truques: ${truque}</p>`
+                }
+            }
+            const niveis = ["nivel_1", "nivel_2", "nivel_3", "nivel_4", "nivel_5", "nivel_6", "nivel_7", "nivel_8", "nivel_9",]
+            for (const nivel of niveis){
+                if (dados.magias[nivel] != ""){
+                    const titulo = nivel.replace("_", " ")
+                    const tituloCapitalizado = titulo.charAt(0).toUpperCase() + titulo.slice(1)
+                    let conteudo = `<strong>${tituloCapitalizado}</strong><br>`
+                    for (const magia of dados.magias[nivel]){
+                        conteudo += `${magia}<br>`
+                    }
+                    document.getElementById("magias").innerHTML += `<p>${conteudo}</p>`
+                }
+            }
+            for (const habilidade of dados.habilidades_e_talentos){
+                let conteudo = `<strong>${habilidade.nome}</strong>`
+
+                if (habilidade.origem != ""){
+                    conteudo += ` - ${habilidade.origem}`
+                }
+                if (habilidade.descricao != ""){
+                }
+                document.getElementById("habilidades").innerHTML += `<p>${conteudo}</p>`
+            }
+
+            document.getElementById("moedas").innerHTML += `
+            <table>
+                <tr>
+                    <th>Platina</th>
+                    <th>Ouro</th>
+                    <th>Electrum</th>
+                    <th>Prata</th>
+                    <th>Cobre</th>
+                </tr>
+                <tr>
+                    <td>${dados.equipamentos.moedas.platina}</td>
+                    <td>${dados.equipamentos.moedas.ouro}</td>
+                    <td>${dados.equipamentos.moedas.electrum}</td>
+                    <td>${dados.equipamentos.moedas.prata}</td>
+                    <td>${dados.equipamentos.moedas.cobre}</td>
+                </tr>
+            </table>
+            `
+            document.getElementById("conversao").innerHTML = `
+            <h3>Conversor de Moedas</h3>
+            <p>Selecione a quantidade: <input id="quantidade"></input></p>
+            
+            <select id="moeda_origem">
+                <option value="platina">Platina</option>
+                <option value="ouro">Ouro</option>
+                <option value="electrum">Electrum</option>
+                <option value="prata">Prata</option>
+                <option value="cobre">Cobre</option>
+            </select>
+            <select id="moeda_destino">
+                <option value="platina">Platina</option>
+                <option value="ouro">Ouro</option>
+                <option value="electrum">Electrum</option>
+                <option value="prata">Prata</option>
+                <option value="cobre">Cobre</option>
+            </select>
+            <button onclick="converter()">Converter</button>
+            <p>Resultado: <span id="resultado_conversao"></span></p>
+
+        `
+        })
+    </script>
+</body>
+</html>

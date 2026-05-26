@@ -1,0 +1,276 @@
+{
+  "jogador": "Matheus V",
+  "foto": "",
+
+  "nome": "Sollux 'Blackhand' of Aerorum",
+  "classe": "Paladino",
+  "subclasse": "Juramento de devoção",
+  "nivel": 20,
+  "raca": "Humano",
+  "subrace": "",
+  "antecedente": "Eremita",
+  "alinhamento": "Lawful-Good (LG)",
+
+  "atributos": {
+    "forca": 20,
+    "destreza": 14,
+    "constituicao": 16,
+    "inteligencia": 14,
+    "sabedoria": 14,
+    "carisma": 20
+  },
+
+  "bonus_proficiencia": 6,
+
+  "saving_throws": {
+    "forca":        { "proficiente": false, "bonus_extra": 0 },
+    "destreza":     { "proficiente": true, "bonus_extra": 0 },
+    "constituicao": { "proficiente": false, "bonus_extra": 0 },
+    "inteligencia": { "proficiente": false, "bonus_extra": 0 },
+    "sabedoria":    { "proficiente": true, "bonus_extra": 0 },
+    "carisma":      { "proficiente": true, "bonus_extra": 0 }
+  },
+
+  "pericias": {
+    "acrobacia":          { "proficiente": false, "expertise": false },
+    "adestrar_animais":   { "proficiente": false, "expertise": false },
+    "arcana":             { "proficiente": false, "expertise": false },
+    "atletismo":          { "proficiente": true, "expertise": false },
+    "atuacao":            { "proficiente": false, "expertise": false },
+    "enganacao":          { "proficiente": false, "expertise": false },
+    "furtividade":        { "proficiente": false, "expertise": false },
+    "historia":           { "proficiente": false, "expertise": false },
+    "intimidacao":        { "proficiente": false, "expertise": false },
+    "intuicao":           { "proficiente": false, "expertise": false },
+    "investigacao":       { "proficiente": false, "expertise": false },
+    "medicina":           { "proficiente": true, "expertise": false },
+    "natureza":           { "proficiente": false, "expertise": false },
+    "percepcao":          { "proficiente": true, "expertise": false },
+    "persuasao":          { "proficiente": true, "expertise": false },
+    "prestidigitacao":    { "proficiente": false, "expertise": false },
+    "religiao":           { "proficiente": true, "expertise": false },
+    "sobrevivencia":      { "proficiente": false, "expertise": false }
+  },
+
+  "combate": {
+    "pv_maximo": 181,
+    "pv_atual": 181,
+    "pv_temporario": 0,
+    "ca": 21,
+    "iniciativa": 2,
+    "deslocamento": 9,
+    "dados_de_vida": {
+      "tipo": "1d10",
+      "total": 20,
+      "usados": 0
+    },
+    "resistencias": [],
+    "imunidades": [],
+    "vulnerabilidades": []
+  },
+
+  "ataques": [
+    {
+      "nome": "Maça ",
+      "bonus_ataque": 11,
+      "dano": "1d6",
+      "tipo_de_dano": "concussão",
+      "alcance": "1,5m",
+      "notas": ""
+    }
+  ],
+
+  "magias": {
+    "conjurador": true,
+    "atributo_conjuracao": "Carisma",
+    "cd_magia": 19,
+    "bonus_ataque_magia": 11,
+    "truques": [],
+    "nivel_1": ["Heroísmo", "Escudo da Fé", "Duelo Compelido", "Detectar o Bem e Mal", "Curar Ferimentos", "Comando", "Bênção", "Auxílio Divino", "Destruição Trovejante", "Santuário"],
+    "nivel_2": ["Zona da Verdade", "Marca da Punição", "Localizar Objeto"],
+    "nivel_3": ["Revivificar", "Manto do cruzado", "Luz do Dia", "Dissipar Magia", "Círculo Mágico", "Aura de Vitalidade"],
+    "nivel_4": ["Localizar Criatura", "Banimento", "Aura de Pureza"],
+    "nivel_5": ["Círculo do poder", "Dissipar o Bem e Mal", "Missão", "Onda destrutiva", "Reviver os Mortos"],
+    "nivel_6": [],
+    "nivel_7": [],
+    "nivel_8": [],
+    "nivel_9": []
+  },
+
+  "slots_de_magia": {
+    "nivel_1": { "total": 4, "usados": 0 },
+    "nivel_2": { "total": 3, "usados": 0 },
+    "nivel_3": { "total": 3, "usados": 0 },
+    "nivel_4": { "total": 3, "usados": 0 },
+    "nivel_5": { "total": 2, "usados": 0 },
+    "nivel_6": { "total": 0, "usados": 0 },
+    "nivel_7": { "total": 0, "usados": 0 },
+    "nivel_8": { "total": 0, "usados": 0 },
+    "nivel_9": { "total": 0, "usados": 0 }
+  },
+
+  "equipamentos": {
+    "armadura_equipada": "Armadura de placas",
+    "escudo_equipado": true,
+    "inventario": [
+      {
+        "item": "Escudo",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": ""
+      },
+      {
+        "item": "Armadura de placas",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": ""
+      },
+      {
+        "item": "Símbolo sagrado",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": ""
+      },
+      {
+        "item": "Pacote de paladino",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": "Um estojo de pergaminho cheio de notas dos seus estudos e orações, um cobertor de inverno,um conjunto de roupas comuns, um kit de herbalismo"
+      },
+      {
+        "item": "Pacote de sacerdote",
+        "quantidade": 1,
+        "peso": 0,
+        "descricao": "Guardado em sua mochila: um cobertor, 10 velas, uma caixa de fogo, uma caixa de esmolas, 2 blocos de incenso, um incensário, vestes, 2 dias de rações e um cantil"
+      }
+    ],
+    "moedas": {
+      "platina": 0,
+      "ouro": 0,
+      "electrum": 0,
+      "prata": 0,
+      "cobre": 0
+    },
+    "carga_atual": 0,
+    "carga_maxima": 0
+  },
+
+  "habilidades_e_talentos": [
+    {
+      "nome": "Sentido Divino",
+      "origem": "Habilidade paladino",
+      "descricao": ""
+    },
+    {
+      "nome": "Cura pelas Mãos ",
+      "origem": "Habilidade paladino",
+      "descricao": ""
+    },
+    {
+      "nome": "Destruição Divina (Smite)",
+      "origem": "Habilidade paladino",
+      "descricao": ""
+    },
+    {
+      "nome": "Proteção contra o bem e mal",
+      "origem": "",
+      "descricao": ""
+    },
+    {
+      "nome": "Defesa",
+      "origem": "Habilidade paladino",
+      "descricao": "+1 CA com armadura"
+    },
+    {
+      "nome": "Canalizar divindade ",
+      "origem": "Habilidade paladino",
+      "descricao": " (1 vez por descanso longo ou curto):"
+    },
+    {
+      "nome": "Arma Sagrada",
+      "origem": "Habilidade paladino",
+      "descricao": ""
+    },
+    {
+      "nome": "Expulsar o Profano",
+      "origem": "",
+      "descricao": ""
+    },
+    {
+      "nome": "Ataque extra",
+      "origem": "",
+      "descricao": "Dois ataques em cada turno"
+    },
+    {
+      "nome": "Aura de proteção",
+      "origem": "",
+      "descricao": "Sempre que você ou uma criatura amigável a até 9 metros de você tiver que fazer um teste de resistência, aquela criatura ganha um bônus no seu teste de proteção igual a seu modificador de Carisma= 5"
+    },
+    {
+      "nome": "Aura de coragem",
+      "origem": "",
+      "descricao": "Você e as criaturas amigáveis dentro de um raio de 9 metros de você não podem ser amedrontadas enquanto você estiver consciente."
+    },
+    {
+      "nome": "Destruição divina aprimorada",
+      "origem": "",
+      "descricao": "Sempre que você atingir uma criatura com um ataque corpo-a-corpo, a criatura sofre 1d8 de dano radiante extra. Se você também usar sua Destruição Divina em um ataque, você adiciona esse dano ao dano extra da sua Destruição Divina."
+    },
+    {
+      "nome": "Toque purificador",
+      "origem": "",
+      "descricao": "Você pode usar sua ação para terminar uma magia em si mesmo ou em uma criatura voluntária que você tocar. Você pode usar essa característica um número de vezes igual a seu modificador de Carisma = 5. Você recupera os usos gastos quando termina um descanso longo."
+    },
+    {
+      "nome": "Aura de devoção",
+      "origem": "",
+      "descricao": "você e as criaturas amistosas a até 9 metros não podem ser enfeitiçadas enquanto você estiver consciente."
+    },
+    {
+      "nome": "Pureza de espírito",
+      "origem": "",
+      "descricao": "você estará sempre sob efeito da magia proteção contra o bem e mal"
+    },
+    {
+      "nome": "Halo sagrado",
+      "origem": "",
+      "descricao": "com uma ação, você pode emanar uma aura de luz solar. Por 1 minuto, luz plena emana de você num raio de 9 metros, penumbra brilha mais 9 metros além. Sempre que uma criatura inimiga começar seu turno na luz plena, a criatura sofrerá 10 de dano radiante. Além disso, por essa duração, você tem vantagem em testes de resistência contra magias conjuradas por corruptores ou mortos-vivos. Uma vez que você use essa característica, não poderá fazê-lo novamente até ter terminado um descanso longo."
+    },
+    {
+      "nome": "Líder inspirador",
+      "origem": "Talentos",
+      "descricao": "Você pode gastar 10 minutos inspirando seus companheiros, suportando a vontade deles de lutar. Quando fizer isso, escolha até seis criaturas amigáveis (que pode incluir você) a até 9 metros de você que possam ver ou ouvir você e possam te compreender. Cada criatura ganha pontos de vida temporários igual ao seu nível + seu modificador de Carisma. Uma criatura não pode ganhar pontos de vida temporários desse talento novamente até terminar um descanso curto ou longo."
+    },
+    {
+      "nome": "Resiliente",
+      "origem": "Talentos",
+      "descricao": "Aumente o valor de habilidade escolhido em 1,até o máximo de 20. Você ganha proficiência em testes de resistência usando a habilidade escolhida."
+    }
+  ],
+
+  "proficiencias_e_idiomas": {
+    "armaduras": ["Armadura leve", "Armadura média", "Armadura pesada"],
+    "armas": ["Todas as armas marciais"],
+    "ferramentas": ["Ferramentas de ferreiro", "Kit de herbalismo"],
+    "idiomas": ["Comum", "Celestial", "Abissal"]
+  },
+
+  "sentidos": {
+    "percepcao_passiva": 18,
+    "visao_no_escuro": 0,
+    "outros": []
+  },
+
+  "personalidade": {
+    "tracos": "Eu sou absurdamente sereno, mesmo em face do desespero",
+    "ideal": "Bem Maior. Meus dons devem ser partilhados com todos, não usados em benefício próprio",
+    "vinculo": "Se minha descoberta vir à tona, ela poderá trazer destruição ao mundo.",
+    "fraqueza": "Eu gosto de guardar segredos e não os partilho com ninguém"
+  },
+
+  "historia": "Paladino Humano Filho de um antigo deus da luz e raios, descontente com preceitos e ações dos seres superiores, renegou sua origem divina e decidiu vir para Faerun para ajustar a balança e trazer paz e justiça para uma terra necessitada. Apesar de ter rejeitado sua origem divina, ainda apresenta alguns resquícios divinos, como poderes mágicos canalizados em sua essência de paladino, impossibilidade de envelhecer, e algumas outras características físicas como rosto e corpo imaculado.Esconde sua origem a todos os custos, e nunca a revelou para nenhuma outra pessoa ou ser A história que costuma contar é a seguinte: Habitante de uma vila no extremo leste de Faerun, era um humilde ferreiro que em um certa ocasião presenciou a invasão de sua vila por seres malignos. Em um momento de extremo desespero pegou uma espada de sua forja e por um chamado divino, conseguiu lutar contra os seres. Sentiu o chamado do paladino e hoje trilha este caminho em buscando trazer paz e justiça para este mundo",
+
+  "aliados_e_organizacoes": [],
+
+  "notas": ""
+}
