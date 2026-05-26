@@ -19,27 +19,28 @@
     </div>
     <script>
         window.onload = function(){
-            fetch("/personagens")
-            .then(resposta => resposta.json())
-            .then(dados =>{console.log(dados)
-                for (const character of dados)
-                document.getElementById("characters-list").innerHTML += `<button onclick="window.location.href='ficha.html?personagem=${character}'">${character}</button>`
-            })
+    fetch("/personagens")
+    .then(resposta => resposta.json())
+    .then(dados => {
+        for (const character of dados)
+        document.getElementById("characters-list").innerHTML += `<button onclick="window.location.href='ficha.html?personagem=${character}'">${character}</button>`
+    })
+}
+
+function buscar(){
+    const nome_ficha = document.getElementById("input-name").value.trim();
+    
+    if (!nome_ficha) return;
+    
+    fetch(`/personagem/${nome_ficha}`)
+    .then(resposta => {
+        if (!resposta.ok){
+            document.getElementById("mensagem_erro").textContent = "Personagem não encontrado!"
+            return
         }
-
-
-        function buscar(){
-            const nome_ficha = document.getElementById("input-name").value
-            fetch(`personagem/${nome_ficha}`)
-            .then(resposta =>{
-                if (!resposta.ok){
-                    document.getElementById("mensagem_erro").textContent = "Personagem não encontrado!"
-                    return
-                }
-                window.location.href = `ficha.html?personagem=${nome_ficha}`
-            })
-
-        }
+        window.location.href = `ficha.html?personagem=${nome_ficha}`
+    })
+}
         </script>
 </body>
 </html>
