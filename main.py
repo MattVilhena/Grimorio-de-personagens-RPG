@@ -21,7 +21,7 @@ def raiz():
     return RedirectResponse(url="/frontend/index.html")
 
 def buscar_personagem(character):
-    character = character.lower()
+    character = character.lower().strip()
     for arquivo in os.listdir("personagens"):
         if arquivo.endswith(".json"):
             nome_arquivo_limpo = arquivo.replace(".json", "").lower()
